@@ -24,7 +24,7 @@ function App() {
     };
 
     fetchData("https://api.coinlore.net/api/tickers/?start=0&limit=5");
-  }, []);
+  },[]);
   return (
     <div className="App">
       <div></div>
@@ -41,7 +41,7 @@ function App() {
           <Route path="/getstarted" element={<GetStarted />} />
           <Route path="/login" element={<Login />} />
           <Route path="/welcome" element={<Welcome />} />
-          <Route path="/BuySell" element={<Sellbuy />} />
+          <Route path="/Sellbuy" element={<Sellbuy />} />
         </Routes>
       </BrowserRouter>
       {/* <Section2 /> */}
