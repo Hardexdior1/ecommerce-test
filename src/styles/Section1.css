@@ -1,0 +1,175 @@
+.sec1-div1 {
+  /* background-color: #7C20BE; */
+
+}
+
+.buy-sell-div {
+  background-color: #7c20be;
+  height: 700px;
+}
+
+/* buy and sell starts */
+.buy-sell-div h1 {
+  position: absolute;
+  width: 560px;
+  height: 115px;
+  left: 96px;
+  top: 211px;
+  text-align: left;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #ffffff;
+}
+@media (max-width: 481px) {
+  .buy-sell-div h1 {
+    color: #fff;
+    position: absolute;
+    left: 5px;
+    width: 350px;
+    /* height: fit-content; */
+  }
+  /* .sec1-div1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  } */
+}
+@media (max-width:541px) {
+  .buy-sell-div h1{
+    color: white;
+    font-size: 40px;
+    /* width: 520px; */
+  }
+}
+.buy-sell-div p {
+  height: 42px;
+  width: 427px;
+  left: 98px;
+  top: 350px;
+  border-radius: nullpx;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: absolute;
+  width: 427px;
+  height: 42px;
+  left: 98px;
+  top: 350px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff;
+}
+@media (max-width: 481px) {
+  .buy-sell-div p {
+    color: #fff;
+    position: absolute;
+    left: 6.5px;
+    width: 280px;
+    /* background-color: red; */
+    top: 480px;
+  }
+}
+/* buy and sell ends */
+
+.circle-img {
+  position: absolute;
+  width: 440px;
+  height: 450px;
+  left: 470px;
+  top: 60px;
+}
+@media (max-width: 481px) {
+  .circle-img {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .circle-img {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    left: 420px;
+  }
+}
+@media (max-width: 1025px) {
+  .circle-img {
+    display: none;
+  }
+}
+/* .get-started  starts*/
+.get-started {
+  position: absolute;
+  width: 339px;
+  height: 45px;
+  left: 100px;
+  top: 432px;
+  background: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  padding-top: 10px;
+}
+/* .get-started ends */
+
+/* mediaquery for get started starts */
+
+@media (max-width: 481px) {
+  .get-started {
+    position: absolute;
+    left: 6px;
+    top: 552px;
+    
+  }
+}
+/* mediaquery for get started ends */
+
+/* css for  apple starts */
+
+.apple {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  left: 100px;
+  top: 509px;
+  border: outset solid 2 #ffffff;
+  background: url(../Images/Group\ 68@2x.png);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+/* mediaquery for apple  starts */
+
+@media (max-width: 480px) {
+  .apple {
+    position: absolute;
+    left: 6px;
+    top: 609px;
+  }
+}
+/* mediaquery for apple  ends */
+
+/* .google css starts */
+.google {
+  background: url(../Images/Group\ 69.png);
+  position: absolute;
+  width: 170.45px;
+  height: 50px;
+  left: 269px;
+  top: 509px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+/* mediaquery for google  starts */
+@media (max-width: 480px) {
+  .google {
+    position: absolute;
+    left: 185px;
+    top: 609px;
+  }
+}

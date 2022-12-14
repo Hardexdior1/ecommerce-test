@@ -1,0 +1,83 @@
+.login-div{
+    background: #EEEDEE;
+    width: 90%;
+    margin:  0 auto;
+    height: 400px;
+    display: inline-block;
+    
+}
+
+
+input{
+    width: 42%;
+    
+    background: #FFFFFF;
+    border: none;
+    height: 48px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+@media (max-width:990px) {
+    input{
+        width: 95%;
+    }
+    .business-btn{
+        margin-top: 10px;
+    }
+    .log-div{
+        width: 100%;
+    }
+
+}
+#check{
+    height: 35px;
+    width: 17px;
+    border-radius: 100%;
+    accent-color:  #7C20BF;
+    vertical-align: middle;
+    /* margin-top: 70px; */
+}
+.forgot-link{
+    margin-left: 10%;
+    text-decoration: none;
+    color: #7C20BF;
+    /* margin-bottom: 1%; */
+}
+@media (max-width:481px) {
+    .forgot-link{
+         display: grid; 
+    }
+    
+}
+
+.login-link{
+    color: #EEEDEE;
+    background-color: #7C20BF;
+    border: none;
+    text-decoration: none;
+    
+    border-radius: 5px;
+     padding: 1% 18%;
+
+}
+@media  (max-width:990px) {
+    .login-link{
+        padding: 3% 40%;
+    }
+   
+    
+}
+.get-started-link{
+    text-decoration: none;
+    color:  #7C20BF;
+    
+}
+/* @media  (max-width:281px) {
+    .login-link{
+         /* padding: 10px 15px;  */
+         
+        
+    /* }
+    
+    
+} */ 

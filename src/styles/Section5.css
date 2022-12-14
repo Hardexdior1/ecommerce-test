@@ -1,0 +1,47 @@
+.section5 {
+  line-height: 5px;
+  margin-bottom: 70px;
+  background-color: aliceblue;
+  padding: 30px;
+}
+
+.section5 p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.section5 h2 {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.started {
+  text-decoration: none;
+  color: #fff;
+  
+  height: 45px;
+
+padding: 15px 65px;
+margin-top: 400%;
+  background: #7c20bf;
+  border-radius: 5px;
+  
+}
+.apple2{
+  background-color: black;
+  margin-right: 10px;
+  margin-top: 50px;
+}
+.google2{
+  margin-top: 50px;
+  background-color: aquamarine;
+}
