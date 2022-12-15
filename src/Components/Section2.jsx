@@ -15,6 +15,8 @@ const Section2 = ({ rates }) => {
                 <p>{each.percent_change_24}</p>
               </div>
               <p>{each.price_usd}</p>
+              <p>{each.time}</p>
+              <p></p>
             </div>
           </div>
         );
