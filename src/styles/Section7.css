@@ -1,11 +1,11 @@
 .sec7-div{
-    /* border: 2px solid red; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     background-color:  #EDE9EF;;
     color:  #26093A;
     padding: 40px 20px;
     width: 100%;
+    margin: 0 auto;
     
 }
 body{
@@ -14,8 +14,12 @@ body{
 @media (max-width:481px) {
     .sec7-div{
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr 1fr ;
+        gap: 10px;        
+    }
+    .sec7-div3{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 .sec7-div b{

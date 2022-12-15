@@ -1,6 +1,4 @@
-.navbar1{
-    width: 100%;
-}
+
 
 .me-auto{
     margin-left:45%;
@@ -70,24 +68,4 @@ margin-left: 20px;
 
 
 
-@media (max-width:1281px) {
-    /* .me-auto{
-        margin-left: 205px;
-    }
-    #button1{
-        position: absolute;
-        width: 150px;
-        height: 45px;
-        left: 700px;
-        top: 16px; 
-    }
-    #button2{
-        text-decoration: none;
-        position: absolute;
-        width: 150px;
-        height: 45px;
-        left: 835px;
-        
 
-    } */
-}
