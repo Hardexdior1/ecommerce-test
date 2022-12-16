@@ -19,12 +19,7 @@ const Section3 = () => {
 
         <button
           onClick={() => {
-            if (divRef.current.classList.contains("active")) {
-              divRef.current.classList.remove("active");
-              setData("See Less");
-            } else {
-              setData("See More");
-            }
+           
           }}
           className="see">
           See More
@@ -32,7 +27,7 @@ const Section3 = () => {
 
         {/* 3 THREE DIVS STARTS */}
 
-        <div ref={divRef} className="three-divs">
+        <div  className="three-divs">
           <div className="emd-div">
             <img src={rafiki} alt="" />
             <h2>Easy Mode Of Payment</h2>

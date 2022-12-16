@@ -3,7 +3,7 @@ import "../styles/Section2.css";
 
 const Section2 = ({ rates }) => {
   console.log(rates);
-  
+
   return (
     <div className="sec-2">
       {rates.map((each) => {
@@ -12,10 +12,11 @@ const Section2 = ({ rates }) => {
             <div className="each-rate">
               <div className="top-section">
                 <p>{each.name}</p>
-                <p>{each.percent_change_24}</p>
+                <p>{each.percent_change_24h}</p>
+
               </div>
+
               <p>{each.price_usd}</p>
-              <p>{each.time}</p>
               <p></p>
             </div>
           </div>

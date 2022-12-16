@@ -9,6 +9,25 @@
     .comment-div{
         display: grid;
         grid-template-columns: 1fr;
-        display: none;
+        /* margin:  0 auto ; */
+        margin-left: 1.5px;
+        background-color: black;
+        /* padding:1 10px; */
     }
+    .uni-1{
+        width: 95%;
+        margin-left: 6px;
+        margin-top: 10px;
+    }
+    .uni-2{
+        width: 95%;
+        margin-left: 6px;
+    }
+    .uni-3{
+        width: 95%;
+        margin-left: 6px;
+    }
+    
+    
+
 }

@@ -6,7 +6,11 @@
   width: 95%;
    margin: 0 auto;
 }
-
+/* @media (max-width:481px) {
+  .section5{
+    width: 100%;
+  }
+} */
 .section5 p {
   font-family: Roboto;
   font-size: 18px;

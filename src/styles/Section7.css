@@ -14,10 +14,10 @@ body{
 @media (max-width:481px) {
     .sec7-div{
         display: grid;
-        grid-template-columns: 1fr  ;
+        grid-template-columns: 1fr 1fr  ;
         text-align: center;
         gap: 10px;   
-        width: 80%;     
+        width: 90%;     
     }
     .sec7-div3{
         margin-top: 10px;

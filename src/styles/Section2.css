@@ -3,3 +3,7 @@
     border: 2px solid red;
     background-color: blue;
 }
+
+.top-section{
+    display: flex;
+}
