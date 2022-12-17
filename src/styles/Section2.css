@@ -23,9 +23,11 @@
 }
 @media (max-width:481px) {
     .each-rate{
-        background-color: rgb(184, 169, 143);
+        background-color: rgb(217, 223, 198);
+        margin-left: -29px;
     }
     .each-rate p{
-        color:green;
+        color: rgb(26, 20, 20);
+
     }
 }

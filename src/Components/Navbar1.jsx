@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const Navbar1 = () => {
   const style = {
     backgroundColor: "#7C20BE",
+    
   };
   return (
     <Navbar className="navbar1" style={style} expand="lg">

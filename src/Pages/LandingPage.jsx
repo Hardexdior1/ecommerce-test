@@ -19,7 +19,7 @@ const LandingPage = ({rate}) => {
       <Section1 />
       <Section2  rates={rate}/>
       <Section3 />
-      <Section4 />
+       <Section4 /> 
       <Section5 />
       <Section6 />
       <Section7 />

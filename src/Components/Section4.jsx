@@ -21,7 +21,7 @@ const Section4 = () => {
 
         <div className="sec4-general-div">
           <div className="div1">
-            <img className="img1" src={img1} alt="" />
+            <button className="btn">1</button>
             <span>Create Free Account</span>
 
             <p>
