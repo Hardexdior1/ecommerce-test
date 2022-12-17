@@ -2,6 +2,7 @@ marquee{
   color: yellow;
   font-weight: bolder;
   background-color: blue;
+  text-transform: capitalize;
 }
 
 

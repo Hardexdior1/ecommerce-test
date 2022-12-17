@@ -15,8 +15,8 @@ const Section3 = () => {
   return (
     <div>
       <marquee behavior="" direction="left">
-        Quick Notice !! toheeb na Betting go kill you e be lke say igbo dey your
-        head...if you use that 1500 to buy garri for people dem go pray for u
+       toheeb wetin dey sup...i neva finish am
+      
       </marquee>
       <div className="sec3-div">
         <h2>Why do people get involved with Cryptocurrencies?</h2>
