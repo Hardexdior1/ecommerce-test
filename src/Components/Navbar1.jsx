@@ -14,7 +14,7 @@ const Navbar1 = () => {
     <Navbar className="navbar1" style={style} expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          <Link path="/landingPage">
+          <Link to='/' path="/">
             <img src={tradExpressLogo} alt="" />
           </Link>
         </Navbar.Brand>

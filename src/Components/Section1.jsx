@@ -22,9 +22,9 @@ const Section1 = () => {
           {" "}
           <img src={circleimg} alt="" />
         </div>
-        <Link className="get-started">Get Started</Link>
+        <Link to='Getstarted' className="get-started">Get Started</Link>
         <Link className="apple"><img src={apple} alt="" /></Link>
-        <Link className="google"><img src={google} alt="" /></Link>
+        <Link className="google" ><img src={google} alt="" /></Link>
       </div>
     </div>
   );

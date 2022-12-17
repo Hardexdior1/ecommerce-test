@@ -1,5 +1,7 @@
 import React from 'react'
-
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/Business.css'
 const Business = () => {
   const [userName, setUserName] = useState("");
   const [fullName, setFullName] = useState("");
@@ -25,10 +27,8 @@ const Business = () => {
           }}>
           <h3>Welcome</h3>
            {/* <Link to='/Business' className="business-btn">Business</Link>  */}
-          <button  className="individual-btn">Individual</button>{" "}
-          <button className="individual-btn">          <Link className="individual-btn" to='/Business'>Individual</Link>
-</button>
-          <button  className="business-btn">Business</button> <br /> <br />
+          <Link className="individual-btn2" to='/Getstarted'>Individual</Link>
+          <button  className="business-btn2">Business</button> <br /> <br />
 
           <input
             onChange={(event) => {

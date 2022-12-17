@@ -7,7 +7,7 @@ import Section5 from "../Components/Section5";
 import Section6 from "../Components/Section6";
 import Section7 from "../Components/Section7";
 // import BuySell from "../Components/BuySell";
-import Sellbuy from "../Components/Sellbuy";
+// import Sellbuy from "../Components/Sellbuy";
 
 
 const LandingPage = ({rate}) => {
@@ -19,7 +19,7 @@ const LandingPage = ({rate}) => {
       <Section1 />
       <Section2  rates={rate}/>
       <Section3 />
-      {/* <Section4 /> */}
+      <Section4 />
       <Section5 />
       <Section6 />
       <Section7 />

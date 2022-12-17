@@ -1,8 +1,33 @@
+
+
+
+select{
+  
+  width: 42%;
+    
+    background: #FFFFFF;
+    border: none;
+    height: 48px;
+    border-radius: 5px;
+    padding-left: 10px;
+    
+ 
+}
+
+@media (max-width:990px) {
+  select{
+      width: 95%;
+  }
+  
+
+}
+
+
 .buy-sell {
   background: #eeedee;
   width: 90%;
   margin: 0 auto;
-  height: 440px;
+  /* height: 440px; */
   display: inline-block;
   /* text-align: left; */
   padding-top: 20px;
@@ -27,6 +52,7 @@
   .buy-sell h4 {
     margin-left: -65%;
   }
+  
 }
 .buy-btn {
   background: #ffffff;
@@ -43,6 +69,11 @@
   border-radius: 21px;
   border: none;
   /* background: #000000; */
+}
+@media (max-width:481px) {
+   .buy-btn{
+    margin-bottom: 20px;
+   }
 }
 h4 {
 }

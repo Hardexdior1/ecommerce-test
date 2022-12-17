@@ -1,16 +1,15 @@
 import React from "react";
 import "../styles/BuySell.css";
-
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 const Sellbuy = () => {
   const [coinToBuy, setCoinToBuy] = useState("");
   const [Currency, SetCurrency] = useState("");
   const [amount, SetAmount] = useState("");
-  const [text, setText] = useState("Coin to sell");
+  const [text, setText] = useState("coin to buy");
   const [active,setActive]=useState(false);
-  // const handleClick=()=>{
-  //   setActive(!active);
-  // }
+  
 //   const [buy, setBuy] = useState("coin to buy");
   //   const style = {
   //     backgroundColor: "#7C20BE",
@@ -19,6 +18,7 @@ const Sellbuy = () => {
   return (
     <div>
       <h2 className="bs-h2">Buy/Sell Instantly</h2>
+
       <div className="buy-sell">
         <button
           onClick={() => {
@@ -27,14 +27,12 @@ const Sellbuy = () => {
           className="buy-btn">
           buy
         </button>{" "}
-        <button
-          onClick={() => {
-            setText("coin to sell");
+        
+        <Link to='/Sell' onClick={() => {
+            setText("Coin to sell");
             // style={backgroundColor:'red'}
           }}
-          className="sell-btn">
-          Sell
-        </button>
+          className="buy-btn4">Sell</Link>
         <form
           action=""
           onSubmit={(event) => {
@@ -50,7 +48,20 @@ const Sellbuy = () => {
           <h4>
             <label htmlFor="coin">{text} </label>
           </h4>
-          <input
+          <select  name="" id="">
+
+          <option value="BTC">Bitcoin (BTC)</option>
+          <option value="BTC">Etherum (ETH)</option>
+          <option value="BTC">Koins (K)</option>
+          <option value="BTC">Shiftcoin (SH)</option>
+
+
+
+
+
+
+          </select>
+          {/* <input
             onChange={(event) => {
               console.log(event.target.value);
               setCoinToBuy(event.target.value);
@@ -58,19 +69,23 @@ const Sellbuy = () => {
             id="coin"
             type="text"
             placeholder="Bitcoin (BTC)"
-          />
+          /> */}
           <h4>
             <label htmlFor="naira">Currency</label>
           </h4>
-          <input
-            onChange={(event) => {
-              console.log(event.target.value);
-              SetCurrency(event.target.value);
-            }}
-            id="naira"
-            type="text"
-            placeholder="Naira (NGN)"
-          />
+          <select  name="" id="">
+
+          <option value="BTC">Naira (NGN)</option>
+          <option value="BTC">Dollars (USDT)</option>
+          <option value="BTC">Euro (E)</option>
+          <option value="BTC">Cedis (C)</option>
+
+
+
+
+
+
+          </select>
           {/* <select name="" id="">
             <option value="dollars">dollars</option>
         </select> */}
@@ -96,3 +111,12 @@ const Sellbuy = () => {
 };
 
 export default Sellbuy;
+
+
+
+
+
+
+
+
+

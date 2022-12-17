@@ -1,7 +1,9 @@
 .section5 {
   line-height: 5px;
   margin-bottom: 70px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  background: #EDE9EF;
+
   padding: 30px;
   width: 95%;
    margin: 0 auto;

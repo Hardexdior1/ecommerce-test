@@ -31,9 +31,11 @@ const GetStarted = () => {
           <h3>Welcome</h3>
            {/* <Link to='/Business' className="business-btn">Business</Link>  */}
           <button  className="individual-btn">Individual</button>{" "}
-          <button className="individual-btn">          <Link className="individual-btn" to='/Business'>Business</Link>
-</button>
-          <button  className="business-btn">Business</button> <br /> <br />
+          <Link to='/Business' className='individual-btn2'>business</Link>
+
+       
+          {/* <button  className="business-btn">Business</button> */}
+           <br /> <br />
 
           <input
             onChange={(event) => {

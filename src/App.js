@@ -10,8 +10,10 @@ import Login from "./Pages/Login";
 import Welcome from "./Pages/Welcome";
 import { useState } from "react";
 import { useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Sellbuy from "./Components/Sellbuy";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Sellbuy from "./Pages/Sellbuy";
+import Business from "./Pages/Business";
+import Sell from "./Pages/Sell";
 
 function App() {
   const [data, SetData] = useState({ rates: [] });
@@ -24,27 +26,22 @@ function App() {
     };
 
     fetchData("https://api.coinlore.net/api/tickers/?start=0&limit=5");
-  },[]);
+  }, []);
   return (
     <div className="App">
       <div></div>
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <LandingPage    rate={data.rates}
-              />
-            }
-          />
+          <Route path="/" element={<LandingPage rate={data.rates} />} />
           <Route path="/getstarted" element={<GetStarted />} />
           <Route path="/login" element={<Login />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/Sellbuy" element={<Sellbuy />} />
+          <Route path="Business" element={<Business />} />
+          <Route path="/Sell" element={<Sell />} />
         </Routes>
       </BrowserRouter>
-      {/* <Section2 /> */}
     </div>
   );
 }
