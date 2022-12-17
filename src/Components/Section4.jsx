@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Section4.css";
-import img1 from "../Images/Vector.png";
+// import img1 from "../Images/Vector.png";
 import cuate2 from "../Images/cuate2.png";
 import piggy from "../Images/piggy.png";
 import bitcoin from '../Images/bitcoin.png'

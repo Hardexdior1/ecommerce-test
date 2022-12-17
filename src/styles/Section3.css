@@ -1,8 +1,6 @@
 .sec3-div {
- 
-  background: #E5E5E5;
+  background: #e5e5e5;
   width: 100%;
-  
 }
 
 .see {
@@ -15,41 +13,34 @@
 
 /* THREE DIVS STARTS */
 
-
-.three-divs{
+.three-divs {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   margin-bottom: 10px;
   margin-top: 20px;
   padding-bottom: 20px;
-  /* display: none; */
-  
 }
-@media (max-width:481px) {
-  .three-divs{
-
+@media (max-width: 481px) {
+  .three-divs {
     display: grid;
     grid-template-columns: 1fr;
-    /* width: 100%; */
-
   }
 }
 
 .three-divs .active {
-  
 }
-.three-divs h1{
-    text-align: left;
+.three-divs h1 {
+  text-align: left;
 }
 
 .emd-div {
-     background-color: white; 
+  background-color: white;
 
   text-align: center;
-    color: #26093a;
+  color: #26093a;
   border-radius: 5px;
-  
+
   max-height: 330px;
   padding: 60px 20px;
 }
@@ -78,18 +69,12 @@
 }
 
 .ff-div {
-  /* background-color: blue;
-border-radius: 5px;
-width: 349.58px;
-height: 338px; */
-background-color: white;
+  background-color: white;
 
-/* max-height: 310px; */
-max-height: 330px;
-padding: 60px 20px;
+  max-height: 330px;
+  padding: 60px 20px;
   border-radius: 5px;
-  /* width: 349.58px; */
-  /* height: 260px; */
+
   align-items: center;
 }
 .ff-div h1 {
@@ -100,21 +85,17 @@ padding: 60px 20px;
   font-weight: 700;
   line-height: 19px;
   letter-spacing: 0em;
-  /* text-align: center;  */
 }
-.ff-div p{
+.ff-div p {
   color: #26093a;
-  margin:  0 auto;
+  margin: 0 auto;
 }
 .investment-div {
-  
   background-color: white;
 
   border-radius: 5px;
-  /* width: 355px;
-  height: 300px; */
-  /* max-height: 310px; */
-   max-height: 330px; 
+
+  max-height: 330px;
   padding: 60px 20px;
 
   align-items: center;
@@ -132,8 +113,6 @@ padding: 60px 20px;
   color: #26093a;
 }
 .investment-div p {
-  /* width: 310.29px;
-  height: 60px; */
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -142,22 +121,4 @@ padding: 60px 20px;
   text-align: center;
   color: #26093a;
   margin: 0 auto;
-  /* margin-left: 0px; */
 }
-/* 
-.sec3-div h1{
-    
-position: absolute;
-width: 731px;
-/* height: 38px;
-left: 355px;
-top: 931px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 38px;
-/* identical to box height */
-/* color: #26093A;
-} */

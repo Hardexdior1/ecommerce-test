@@ -1,70 +1,66 @@
-.sec7-div{
+.sec7-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: #ede9ef;
+  color: #26093a;
+  padding: 40px 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+body {
+  background-color: #26093a;
+}
+@media (max-width: 481px) {
+  .sec7-div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    background-color:  #EDE9EF;;
-    color:  #26093A;
-    padding: 40px 20px;
-    width: 100%;
-    margin: 0 auto;
-    
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 10px;
+    width: 90%;
+  }
+  .sec7-div3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
-body{
-    background-color: #26093A;
+.sec7-div b {
+  font-size: 12px;
 }
-@media (max-width:481px) {
-    .sec7-div{
-        display: grid;
-        grid-template-columns: 1fr 1fr  ;
-        text-align: center;
-        gap: 10px;   
-        width: 90%;     
-    }
-    .sec7-div3{
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
+.sec7-div1 {
+  text-align: left;
+  margin-left: 10px;
 }
-.sec7-div b{
-    font-size: 12px;
+.sec7-div2 {
+  text-align: left;
+  margin-left: 10px;
 }
-.sec7-div1{
-    text-align: left;
-    margin-left: 10px;
+.sec7-div3 {
+  text-align: left;
 }
-.sec7-div2{
-    text-align: left;
-    margin-left: 10px;
+.sec7-div4 {
+  text-align: left;
+  margin-left: 10px;
 }
-.sec7-div3{
-    text-align: left;
-    /* margin-left: 10px; */
+.sec7-div5 {
+  text-align: left;
+  margin-left: 10px;
 }
-.sec7-div4{
-    text-align: left;
-    margin-left: 10px;
-}
-.sec7-div5{
-    text-align: left;
-    margin-left: 10px;
-}
-.last-div{
-    background-color:  #FFFFFF;
-    vertical-align: middle;
-    
+.last-div {
+  background-color: #ffffff;
+  vertical-align: middle;
 }
 
-.copy{
-    font-size: 30px;
-    color: black;
-    margin-top: 300px;
+.copy {
+  font-size: 30px;
+  color: black;
+  margin-top: 300px;
 }
- .trad{
-    color: #292929;
-    text-decoration: none;
-    margin-top: -20px;
+.trad {
+  color: #292929;
+  text-decoration: none;
+  margin-top: -20px;
+}
 
- }
-
- .icon{
-    margin-left: 18px;
- }
+.icon {
+  margin-left: 18px;
+}

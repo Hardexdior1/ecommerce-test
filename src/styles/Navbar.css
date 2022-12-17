@@ -1,5 +1,4 @@
 .navbar1{
-    /* background-color: #7C20BE; */
    
 
 }
@@ -10,7 +9,6 @@
 }
 .me-auto .link{
 text-decoration: none;
-/* margin-left: 20px; */
 margin-top: 10px;
 margin-right: 10px;
 font-family: 'Inter';
@@ -23,7 +21,6 @@ vertical-align: middle;
 }
 
 .button1{
- /* box-sizing: border-box;   */
  margin-left: 20px;
  width: 150px;
 height: 45px;
@@ -34,14 +31,12 @@ color: #fff;
 padding-top: 9px;
 background-color:  #7C20BE;
 
-/* margin-left: -60px; */
 
 }
 .button2{
 text-decoration: none;
 width: 150px;
 height: 45px;
-/* margin-left: 900px; */
 background: #FFFFFF;
 border-radius: 5px;
 text-align: center;

@@ -1,10 +1,52 @@
+
+.sec4-div{
+    background-color: #ffff;
+    
+
+}
+.sec4-general-div{
+  margin-top: 10px;
+  padding-bottom: 10px;
+    padding-top: 10px;
+}
+.sec4-general-div p{
+  color:black;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.sec4-general-div span{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+
+
+color: #292929;
+}
+
+@media (min-width:540px) {
+    .sec4-general-div{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background-color: rgb(224, 229, 233);
+    }
+}
+
 .buy-div{
   width: 95%;
-  border: 2px solid ;
   margin: 0 auto;
 }
 .btn{
-  border: 4px solid purple;
+}
+.sec4-general-div .btn{
+  border-top: 2px  solid purple;
+  border-left: 3px  solid purple;
+  border-right: 3px  solid purple;
+  border-bottom: 5px  solid purple;
+  margin-right: 15px;
+
+
 }
 @media (max-width:481px) {
   .div3 img{

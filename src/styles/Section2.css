@@ -1,19 +1,13 @@
-.sec-2{
-    /* height: 100px; */
-    /* border: 2px solid red; */
-    /* background-color: blue; */
-}
+
 
 .top-section{
     display: flex;
-    /* background-color: bisque; */
-    /* background-color: antiquewhite; */
+    
 }
 .each-rate{
     background-color: rgb(104, 212, 212);
     margin: 10px;
     padding-bottom: 0.1;
-    /* height: 70px; */
    background-color: #baa4c5;
 }
 .each-rate p{
