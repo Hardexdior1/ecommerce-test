@@ -9,25 +9,33 @@ import { useRef } from "react";
 const Section3 = () => {
   // const  [SeeMore,setSeeMore]=useState
 
-  const [data, setData] = useState("seeless");
+  const [data, setData] = useState("see more");
   const divRef = useRef();
 
   return (
     <div>
-      <marquee behavior="" direction="left">
-       toheeb wetin dey sup...i neva finish am
       
-      </marquee>
       <div className="sec3-div">
         <h2>Why do people get involved with Cryptocurrencies?</h2>
 
-        <button onClick={() => {}} className="see">
-          See More
+        <button onClick={() => {
+            if (divRef.current.classList.contains('active')){
+              divRef.current.classList.remove('active');
+              setData('See more');
+            }else{
+              divRef.current.classList.add('active');
+              setData('See less')
+            }
+
+
+
+        }} className="see">
+          {data}
         </button>
 
         {/* 3 THREE DIVS STARTS */}
 
-        <div className="three-divs">
+        <div  ref={divRef} className="three-divs">
           <div className="emd-div">
             <img src={rafiki} alt="" />
             <h2>Easy Mode Of Payment</h2>

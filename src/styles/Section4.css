@@ -1,6 +1,5 @@
 
 .sec4-div{
-    background-color: #ffff;
     
 
 }
@@ -29,7 +28,9 @@ color: #292929;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
-      background-color: rgb(224, 229, 233);
+      background-color: white;
+      padding-top: 20px;
+      /* background-color: rgb(224, 229, 233); */
     }
 }
 

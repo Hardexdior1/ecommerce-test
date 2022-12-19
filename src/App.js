@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import GetStarted from "./Pages/GetStarted";
 import Login from "./Pages/Login";
-// import Section2 from "./Components/Section2";
 import Welcome from "./Pages/Welcome";
 import { useState } from "react";
 import { useEffect } from "react";
