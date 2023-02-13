@@ -12,6 +12,7 @@ const Navbar1 = () => {
     
   };
   return (
+    
     <Navbar className="navbar1" style={style} expand="lg">
       <Container>
         <Navbar.Brand href="#home">

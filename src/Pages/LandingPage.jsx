@@ -15,6 +15,8 @@ const LandingPage = ({rate}) => {
   
   return (
     <div>
+    
+      
       
       <Section1 />
       <Section2  rates={rate}/>
