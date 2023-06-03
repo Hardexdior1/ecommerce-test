@@ -7,7 +7,9 @@
     
 }
 
-
+body{
+    font-family: sans-serif;
+}
 input{
     width: 42%;
     
@@ -57,18 +59,36 @@ input{
     text-decoration: none;
     
     border-radius: 5px;
-     padding: 1% 18%;
 
 }
-@media  (max-width:990px) {
-    .login-link{
-        padding: 3% 40%;
-    }
-   
+
     
-}
+
 .get-started-link{
     text-decoration: none;
     color:  #7C20BF;
     
 }
+
+/* new css */
+.carrier{
+    height: 100vh;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+}
+.form button{
+    width: 42%;
+    margin: 0 auto;
+    height: 50px;
+    cursor: pointer;
+    background-color: #7C20BF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+

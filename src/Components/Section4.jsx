@@ -3,58 +3,57 @@ import "../styles/Section4.css";
 // import img1 from "../Images/Vector.png";
 import cuate2 from "../Images/cuate2.png";
 import piggy from "../Images/piggy.png";
-import bitcoin from '../Images/bitcoin.png'
+import bitcoin from "../Images/bitcoin.png";
 const Section4 = () => {
   return (
     <div>
-      <div className="sec4-div">
-        <div className="buy-div">
-        <h2>Buy and Sell your Cryptocurrency in 3 simple steps</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est lectus
-          faucibus et nunc id sollicitudin pretium nulla. Et nunc tempus mauris
-          ullamcorper mauris, rhoncus sed magna. Eu consectetur nulla aliquam
-          consectetur lectus. Rutrum feugiat et, tellus mattis donec et odio
-          molestie amet.
-        </p>
-        </div>
+       
 
-        <div className="sec4-general-div">
-          <div className="div1">
-            <button className="btn">1</button>
-            <span>Create Free Account</span>
-
+      <section className="section4">
+        <h2>
+          {" "}
+          <h2>Buy and Sell your Cryptocurrency in 3 simple steps</h2>
+        </h2>
+        <div className="section5Flex">
+          <div>
+            <button>1</button>
+            <span>Create free account</span>
             <p>
               Sign up for your free TradExpress Wallet on web, iOS, or Android
               devices and follow our easy process to set up your profile.
             </p>
           </div>
-          <div className="div2">
-            <img src={cuate2} alt="" />
+
+          <div>
+            <img src={cuate2} alt="image" />
           </div>
-          <div className="div3">
-            <img src={piggy} alt="" />
-          </div>
-          <div className="div4">
-            <button className="btn">2</button>
+          <div>
+            <button>2</button>
             <span>Deposit</span>
             <p>
               Choose your preferred deposit option like bank transfer,
               credit/debit card or send digital asset directly to your wallet
-              for easy funding/withdrawal.
+              for easy funding/withdrawal
             </p>
           </div>
-          <div className="div5">
-            <button className="btn">3</button>
+
+          <div>
+            <img src={piggy} alt="image" />
+          </div>
+          <div>
+            <button>3</button>
             <span>Buy/ Sell Crypto</span>
             <p>
               Sign up for your free TradExpress Wallet on web, iOS, or Android
               devices and follow our easy process to set up your profile.
             </p>
           </div>
-          <div className="div6"><img src={bitcoin} alt="" /></div>
+
+          <div>
+            <img src={bitcoin} alt="image" />
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

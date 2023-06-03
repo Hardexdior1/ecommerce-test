@@ -9,54 +9,96 @@ import facebook from "../Images/facebook.png";
 const Section7 = () => {
   return (
     <div>
-      <div className="sec7-div">
-        <div className="sec7-div1">
-          <h5>Products</h5>
-          <b>Bitcoin</b> <br />
-          <b>Alt</b> <br />
-          <b>Flat</b> <br />
-          <b>Refill</b> <br />
-          <b>P2P</b>
-        </div>
+      
 
-        <div className="sec7-div2">
-          <h5>Learn</h5>
-          <b>Blog</b> <br />
-          <b>Help Center</b> <br />
-        </div>
 
-        <div className="sec7-div3">
-          <h5>Contact</h5>
-          <b>hello@tradexpress.com</b> <br />
-          <b>support@tradexpress.com</b> <br />
-          <img src={twitter} alt="" />
-          <img className="icon" src={telegram} alt="" />
-          <img className="icon" src={whatsapp} alt="" />
-          <img className="icon" src={facebook} alt="" />
-        </div>
+      <footer className="footer">
+        <div>
+          <h3>Products </h3>
+          <li><Link>Bitcoin</Link></li>
+          <li><Link>Alt</Link></li>
+          <li><Link>Flat</Link></li>
+          <li><Link>Refill</Link></li>
+          <li><Link>P2p</Link></li>
 
-        <div className="sec7-div4">
-          <h5>Company</h5>
-          <b>About Us</b> <br />
-          <b>Careers</b> <br />
-          <b>Rates</b> <br />
-          <b>Mobile</b>
-        </div>
-        <div className="sec7-div5">
-          <h5>Legal</h5>
-          <b>Privacy Policy</b> <br />
-          <b>Anti-Money Laundering</b> <br />
-          <b>Terms and Conditions</b> <br />
-        </div>
-      </div>
 
-      <div className="last-div">
-        <span className="copy">&copy;</span>{" "}
+
+        </div>
+        <div>
+          <h3>Learn</h3>
+          <li><Link>Blog</Link></li>
+          <li><Link>Help center</Link></li>
+
+          
+          
+
+
+
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <li><Link>Hello@tradexpress.com</Link></li>
+          <li><Link>Support@tradexpress.com</Link></li>
+          <div>
+            <Link><img src={twitter} alt="" /></Link>
+            <Link><img src={telegram} alt="" /></Link>
+            <Link><img src={whatsapp} alt="" /></Link>
+            <Link><img src={facebook} alt="" /></Link>
+
+
+
+          </div>
+          
+
+          
+          
+
+
+
+        </div>
+        <div>
+          <h3>Company</h3>
+          <li><Link>About us</Link></li>
+          <li><Link>Careers</Link></li>
+          <li><Link>Rates</Link></li>
+          <li><Link>Mobile</Link></li>
+
+
+
+          
+          
+
+
+
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <li><Link>Privacy Policy</Link></li>
+          <li><Link>Anti-Money Laundering</Link></li>
+          <li><Link>Terms and Conditions</Link></li>
+
+
+
+          
+          
+
+
+
+        </div>
+      </footer>
+      
+
+      <div>
         <Link className="trad">
+        <span className="copy">&copy;</span>{" "}
+
           {" "}
-          2021 Tradexpress Technologies. All Right Reserved
+          2023 Tradexpress Technologies. all right reserved
         </Link>
+        
+        <small className="small"> coded by {'<> oluwadamilare </> '}</small>
       </div>
+
     </div>
   );
 };

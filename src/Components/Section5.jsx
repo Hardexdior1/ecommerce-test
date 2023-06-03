@@ -15,9 +15,11 @@ const Section5 = () => {
           
           <Link className="started"  to="/getstarted">Get started</Link>
 
-        </div>
+        </div> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+        <div>
         <Link><img className="apple2" src={apple} alt="" /></Link>
         <Link ><img className="google2" src={google} alt="" /></Link>
+        </div>
       </div>
     </div>
   );

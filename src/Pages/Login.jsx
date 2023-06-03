@@ -1,66 +1,78 @@
-import React from "react";
-import "../styles/Login.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-const Login = () => {
-  const [username, setUserName] = useState("");
-  const [password, SetPassword] = useState("");
-  return (
-    <div>
-      <div className="login-div">
-        <form
-          action=""
-          onSubmit={(e) => {
-            e.preventDefault();
-            const userDetails = {
-              name: username,
-              password: password,
-            };
-            if (password.length > 5) {
-              console.log(userDetails);
-            } else {
-              alert("password length is too low");
-            }
-          }}>
-          <h3>Welcome Back</h3>
-          <input
-            onChange={(event) => {
-              {
-                console.log(event.target.value);
-                setUserName(event.target.value);
-              }
-            }}
-            type="text"
-            placeholder="Username"
-          />{" "}
-          <br /> <br />
-          <input
-            onChange={(event) => {
-              console.log(event.target.value);
-              SetPassword(event.target.value);
-            }}
-            type="password"
-            placeholder="Password"
-          />{" "}
-          <br />
-          <br />
-          <input id="check" type="checkbox" /> &nbsp;
-          <label htmlFor="check">remember Password</label> &nbsp;{" "}
-          <Link className="forgot-link" to="/Welcome">
-            Forgot Password?
-          </Link>{" "}
-          <br /> <br />
-          {/* <input className='check' type="checkbox" /> &nbsp; <span>hi</span> */}
-          <button className="login-link">Log In </button>
-          <br /> <br />
-          <span>New User ? </span> &nbsp;{" "}
-          <Link className="get-started-link" to="/Getstarted">
-            Click here
-          </Link>
-        </form>
-      </div>
-    </div>
-  );
-};
+import React, { useState } from 'react'
+import '../styles/Login.css'
+import { Link } from 'react-router-dom';
 
-export default Login;
+
+const Login = () => {
+  const[password,setPassword]=useState('');
+  const [userName,setUserName]=useState('');
+  const [email,setEmail]=useState('');
+
+
+function validateEmail(){
+  if(password==''||userName==''||email==''){
+    alert('please fill out the form');
+
+  }
+  else if(password!=''&&userName!=''&&email!=''&&email.length>5&&email.endsWith('@gmail.com'.toLocaleLowerCase())){
+    alert('login successful but you won"t be directed to any page because this is just a front-end project')
+  }
+  else {
+    alert('make sure you email is correct ')
+  }
+  
+
+}
+  return (
+    <div className='carrier'>
+      <h4>welcome back</h4>
+
+      <div className="login-div">
+        <form className='form' onSubmit={(event)=>{
+          event.preventDefault();
+          const userDetails={
+            userName:userName,
+            password:password,
+            email:email,
+          }
+          console.log(userDetails);
+
+        }}>
+          <div>
+            <label htmlFor="UserName" ></label>
+            <input name='UserName' type="text"  placeholder='userName' onChange={((event)=>{
+              setUserName(event.target.value);
+            })}/>
+          </div>
+
+          <div>
+            <label htmlFor="email" ></label>
+            <input name='email' type="email"  placeholder='email' onChange={((event)=>{setEmail(event.target.value)})}/>
+          </div>
+
+          <div>
+            <label htmlFor="password"></label>
+            <input name='password' type="password"  placeholder='password' onChange={((event)=>{
+              setPassword(event.target.value)
+            })}/>
+          </div>
+          <button type='submit' onClick={()=>{
+            validateEmail()
+          }}>login</button>
+        </form>
+
+
+        <div>
+        <small>new user ?   <Link to="/GetStarted">create an account</Link></small>
+
+        </div>
+        
+        <small>forgotten password ? <Link to='/Welcome'>recover your account </Link></small>
+        
+      </div>
+
+    </div>
+  )
+}
+
+export default Login

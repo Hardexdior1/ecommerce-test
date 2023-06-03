@@ -1,140 +1,37 @@
-marquee{
-  color: yellow;
-  font-weight: bolder;
-  background-color: blue;
-  text-transform: capitalize;
+
+
+/* second css starts here */
+.section3{
+font-family: sans-serif;
+padding-top: 30px;
+padding-bottom: 30px;
 }
-
-
-
-
-.sec3-div {
-  background: #e5e5e5;
-  width: 100%;
+.line{
+  height: 10px;
+  width: 100px;
+  background-color: #7c20be;
+  margin: 0 auto 10px;
 }
-
-.see {
-  background: #ede9ef;
-  border: 1px solid #7c20be;
-  border-radius: 5px;
-  width: 150px;
-  height: 45px;
-}
-
-/* THREE DIVS STARTS */
-
-.three-divs {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  display: none;
-}
-.active{
-  display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-
-}
-@media (max-width: 481px) {
-  .three-divs {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
-.three-divs .active {
-}
-.three-divs h1 {
-  text-align: left;
-}
-
-.emd-div {
-  background-color: white;
-
-  text-align: center;
-  color: #26093a;
-  border-radius: 5px;
-
-  max-height: 330px;
-  padding: 60px 20px;
-}
-
-.emd-div h1 {
-  width: 202.46px;
-  height: 15.45px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-}
-.emd-div p {
-  border-radius: null px;
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: center;
+.threeFlexwrap{
+  display: flex;
   align-items: center;
-  color: #26093a;
-  margin: 0 auto;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
+.threeFlexwrap p{
+  font-family: sans-serif;
+  word-spacing: 2px;
+}
+.threeFlexwrap h3{
+  font-size: 1.4rem;
+  font-family: sans-serif;
 
-.ff-div {
+}
+.threeFlexwrap div{
   background-color: white;
-
-  max-height: 330px;
-  padding: 60px 20px;
-  border-radius: 5px;
-
-  align-items: center;
-}
-.ff-div h1 {
-  width: 133px;
-  height: 45px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 19px;
-  letter-spacing: 0em;
-}
-.ff-div p {
-  color: #26093a;
-  margin: 0 auto;
-}
-.investment-div {
-  background-color: white;
-
-  border-radius: 5px;
-
-  max-height: 330px;
-  padding: 60px 20px;
-
-  align-items: center;
-}
-
-.investment-div h1 {
-  width: 81px;
-  height: 19px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  color: #26093a;
-}
-.investment-div p {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
-  text-align: center;
-  color: #26093a;
-  margin: 0 auto;
+padding: 7px 20px;  
+border-radius: 15px 4px;
+border-left:3px solid #7c20be ;
 }

@@ -1,42 +1,65 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import tradExpressLogo from "../Images/TradExpress (1).png";
 // import Navbarcss from '../styles/Navbar.css';
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
 // import '../Pages/Sellbuy'
-
+// const useRef=(nav);
 const Navbar1 = () => {
+  const nav =useRef()
+
+  const Click=()=>{
+    if(nav.current.classList.contains('ul')){
+      nav.current.classList.remove('ul')
+      nav.current.classList.add('showUl')
+
+
+    }
+    else{
+      nav.current.classList.remove('showUl')
+
+      nav.current.classList.add('ul')
+
+    }
+  }
   const style = {
     backgroundColor: "#7C20BE",
-    
   };
   return (
-    
-    <Navbar className="navbar1" style={style} expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">
-          <Link to='/' path="/">
+    <div>
+      {/* <h1>hello world</h1> */}
+      <nav className="navBar" >
+        <div>
+          {" "}
+          <Link to='/' path='/'>
+            {" "}
             <img src={tradExpressLogo} alt="" />
           </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Link className="link" to="/Sellbuy">
-              instant buy/sell
-            </Link>
-            <Link className="link">Learn</Link>
-            <Link className="button1" to="/login">
-              login
-            </Link>
-            <Link className="button2" to="/Getstarted">
-              Get started
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </div>
+        <ul className="ul" ref={nav}>
+          <li>
+            <Link className="Link" to="/Sellbuy"> instant Buy/Sell </Link>
+          </li>
+          <li>
+            <Link className="Link"> Learn </Link>
+          </li>
+          <li>
+            <Link className="Login" to="/Login"> Login</Link>
+          </li>
+          <li>
+              <Link className="getStartedLink"to="/Getstarted" > Get started</Link>
+          </li>
+        </ul>
+        <div className="menu" onClick={Click}>
+          <div></div>
+          <div></div>
+          <div></div>      
+        </div>
+      </nav>
+      
+      
+    </div>
   );
 };
 

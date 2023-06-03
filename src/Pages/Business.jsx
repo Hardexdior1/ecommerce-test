@@ -67,16 +67,15 @@ const Business = () => {
           />
           <br />
           <br />
-          <input
-            onChange={(event) => {
+         <input type="phone" onChange={(event) => {
               {
                 console.log(event.target.value);
                 setPhoneNumber(event.target.value);
               }
             }}
-            type="number"
-            placeholder="Phone Number (+234)"
-          />
+            placeholder='+234'
+            
+            />
           <br /> <br />
           <input
             onChange={(event) => {

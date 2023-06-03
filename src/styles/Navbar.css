@@ -1,70 +1,109 @@
-.navbar1{
-  
+
+
+
+
+
+/* NavBar2 Starts here */
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+    font-weight: lighter;
+    font-family: sans-serif;
+    background-color: #7C20BE;
+}
+.showUl {
+    display: flex;
 
 }
-
-.me-auto{
-    margin-left:45%;
-    vertical-align: middle;
-   
+.ul{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
 }
-.me-auto .link{
-text-decoration: none;
-margin-top: 10px;
-margin-right: 10px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 17px;
-color: #fff;
-vertical-align: middle;
+.ul li{
+    list-style-type: none;
+    margin: 10px;
 }
-
-.button1{
- margin-left: 20px;
- width: 150px;
-height: 45px;
-border: 1px solid #FFFFFF;
-border-radius: 5px;
-text-decoration: none;
-color: #fff;
-padding-top: 9px;
-background-color:  #7C20BE;
-
-
+.showUl li{
+    list-style-type: none;
+    margin: 10px;
 }
-.button2{
-text-decoration: none;
-width: 150px;
-height: 45px;
-background: #FFFFFF;
-border-radius: 5px;
-text-align: center;
-padding-top: 9px;
-margin-left: 20px;
-
+.ul li .Link{
+    list-style-type: none;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.showUl li .Link {
+    text-decoration: none;
+    color: #fff;
 }
 
+.getStartedLink{
+    padding: 13px 30px;
+    background-color: white;
+    border-radius: 2px;
+    color: rgb(32, 132, 247);
+    text-decoration: none;
+}
 
-
-@media (max-width:481px) {
-    .button2{
-        margin-top: 10px;
+.Login{
+    padding: 13px 38px;
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: #7C20BE;
+    text-decoration: none;
+    color: white;
+}
+@media (min-width:819px) {
+    .menu{
+        display: none;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width:819px) {
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu div{
+        background-color:white;
+        height: 3px;
+        width: 15px;
+        margin-top: 2px;
+    }
+    .navBar{
+        position: relative;
+    }
+    .ul{
+        /* display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        background-color: #7C20BE;
+        padding-bottom: 10px;
+        gap: 10px; */
+        display: none;
+    }
+    .showUl{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        background-color: #7C20BE;
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+   
+    
+}
 
 
 

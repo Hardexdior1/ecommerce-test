@@ -9,64 +9,55 @@ import { useRef } from "react";
 const Section3 = () => {
   // const  [SeeMore,setSeeMore]=useState
 
-  const [data, setData] = useState("see more");
-  const divRef = useRef();
+  
 
   return (
     <div>
+    
+
       
-      <div className="sec3-div">
+      <section className="section3">
         <h2>Why do people get involved with Cryptocurrencies?</h2>
+        <div className="line"></div>
 
-        <button onClick={() => {
-            if (divRef.current.classList.contains('active')){
-              divRef.current.classList.remove('active');
-              setData('See more');
-            }else{
-              divRef.current.classList.add('active');
-              setData('See less')
-            }
-
-
-
-        }} className="see">
-          {data}
-        </button>
-
-        {/* 3 THREE DIVS STARTS */}
-
-        <div  ref={divRef} className="three-divs">
-          <div className="emd-div">
-            <img src={rafiki} alt="" />
-            <h2>Easy Mode Of Payment</h2>
+        <div className="threeFlexwrap">
+          <div>
+            <div>
+              <img src={rafiki} alt="" />
+            </div>
+            <h3>Easy Mode Of Payment</h3>
             <p>
               People can now easily send and receive money from anywhere in the
               world to purchase goods and pay for services.
             </p>
           </div>
+          
 
-          <div className="ff-div">
-            <img src={cuate} alt="" />
+          <div>
+            <div>
+              <img src={cuate} alt="" />
+            </div>
+            <h3>Financial Freedom</h3>
 
-            <h2>Financial Freedom</h2>
             <p>
               Just like the internet no single entity controls the Crypto
               network which provides users transparency and privacy, which puts
               you in absolute control of your money.
             </p>
           </div>
+          <div>
+            <div>
+              <img src={amicon} alt="" />
 
-          <div className="investment-div">
-            <img src={amicon} alt="" />
-
-            <h2>Investment </h2>
+            </div>
+            <h3>Investment</h3>
             <p>
               The constant demand as made Cryptocurrecies a Digital Gold used
               for alternative store of wealth on long term investments.
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

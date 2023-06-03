@@ -49,6 +49,7 @@ const GetStarted = () => {
             type="text"
             placeholder="Username"
           />
+
           <br /> <br />
           <input
             onChange={(event)=> {
@@ -107,6 +108,7 @@ const GetStarted = () => {
           <Link to="/login" className="click">
             Click here
           </Link>
+
         </p>
       </div>
     </div>

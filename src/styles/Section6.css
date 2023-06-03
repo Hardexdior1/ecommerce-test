@@ -1,38 +1,21 @@
-.section6{
-  background-color: #ffff;
-  padding-top: 20px;
-}
-
-
-
-
-
-
-
-.comment-div {
-  display: grid;
+.eachReview{
+  display:flex;
+  align-items: center;
   gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 30px;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 10px;
 }
-@media (max-width: 481px) {
-  .comment-div {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-left: 1.5px;
-  }
-  .uni-1 {
-    width: 95%;
-    margin-left: 6px;
-    margin-top: 10px;
-  }
-  .uni-2 {
-    width: 95%;
-    margin-left: 6px;
-  }
-  .uni-3 {
-    width: 95%;
-    margin-left: 6px;
-  }
+
+.section6{
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
+
+.eachReview button{
+  border: 1px solid white;
+  color: white;
+  font-weight: bolder;
+  background-color: #7c20be;
+}
+
+

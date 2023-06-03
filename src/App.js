@@ -30,14 +30,17 @@ function App() {
     <div className="App">
       <div></div>
       <BrowserRouter>
+
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage rate={data.rates} />} />
+
+          <Route path="/" element={ <LandingPage rate={data.rates} /> } />
           <Route path="/getstarted" element={<GetStarted />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/Sellbuy" element={<Sellbuy />} />
           <Route path="Business" element={<Business />} />
+
           <Route path="/Sell" element={<Sell />} />
         </Routes>
       </BrowserRouter>

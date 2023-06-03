@@ -1,20 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Section6.css";
-import group130 from '../Images/Group 130.png'
-import group204 from "../Images/Group 204.png";
-import group205 from "../Images/Group 205.png";
+
+import Reviews from "./ReviewsData";
 
 const Section6 = () => {
+  const [index, setIndex] = useState(0);
+  const { img } = Reviews[index];
+  const nextPerson = () => {
+    setIndex((index) => {
+      let newIndex = index + 1;
+      return newIndex;
+    });
+  };
+  const prevPerson = () => {
+    setIndex((index) => {
+      let newIndex = index - 1;
+      return newIndex;
+    });
+  };
   return (
-    <div>
-      <div className="section6">
-        <h3>Customer’s Review</h3>
+    <div className="section6">
+      <h2>Customer’s Review</h2>
 
-        <div className="comment-div">
-          <img className="uni-1" src={group130} alt="" />
-          <img className="uni-2" src={group204} alt="" />
-          <img className="uni-3" src={group205} alt="" />
+      <div>
+        <div className="eachReview">
+          <div>
+            <img src={img} alt="" />
+          </div>
+
+          
         </div>
+        <div>
+            {" "}
+            <button onClick={prevPerson}> {"<"}</button>
+          </div>
+          <div>
+            <button onClick={nextPerson}> {">"}</button>
+          </div>
       </div>
     </div>
   );

@@ -1,166 +1,87 @@
 
+body{
+  font-family: sans-serif;
+}
 
-.buy-sell-div {
+/* new css starts here */
+
+.section1{
+  background-image: url(../Images/Group\ 127.png);
+  background-size: cover;
   background-color: #7c20be;
-  height: 700px;
-}
-
-/* buy and sell starts */
-.buy-sell-div h1 {
-  position: absolute;
-  width: 560px;
-  height: 115px;
-  left: 96px;
-  top: 211px;
-  text-align: left;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  color: #ffffff;
-}
-@media (max-width: 481px) {
-  .buy-sell-div h1 {
-    color: #fff;
-    position: absolute;
-    left: 5px;
-    width: 350px;
-  }
+  padding: 30px 50px;
+  color: #fff;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
-@media (max-width:541px) {
-  .buy-sell-div h1{
-    color: white;
-    font-size: 40px;
-  }
+
+.textCarrier{
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 620px;
+  gap: 70px;
+  
 }
-.buy-sell-div p {
-  height: 42px;
-  width: 427px;
-  left: 98px;
-  top: 350px;
-  border-radius: nullpx;
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 25px;
-  letter-spacing: 0em;
+
+.linkCarrier{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.textCarrier h1{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.section1{
   text-align: left;
-  position: absolute;
-  width: 427px;
-  height: 42px;
-  left: 98px;
-  top: 350px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 25px;
-  color: #ffffff;
 }
-@media (max-width: 481px) {
-  .buy-sell-div p {
-    color: #fff;
-    position: absolute;
-    left: 6.5px;
-    width: 280px;
-    top: 480px;
-  }
-}
-/* buy and sell ends */
 
-.circle-img {
-  position: absolute;
-  width: 440px;
-  height: 450px;
-  left: 470px;
-  top: 60px;
+.get-started2{
+padding: 13px 7rem;
+border: 1px solid white;
+border-radius: 3px;
+color: rgb(9, 59, 151);
+text-decoration: none;
+background-color: #fff;
 }
-@media (max-width: 481px) {
-  .circle-img {
-    display: none;
+.appleSecond{
+  margin-right: 10px;
+}
+@media (max-width:767px) {
+  .section1{
+    padding: 20px 40px;
   }
-}
-@media (min-width: 1280px) {
-  .circle-img {
-    width: 40px;
-    height: 20px;
-    position: absolute;
-    left: 420px;
+  .textCarrier h1{
+    font-size: 1.8rem;
   }
-}
-@media (max-width: 1025px) {
-  .circle-img {
-    display: none;
+  .textCarrier{
+    max-width: none;
   }
-}
-/* .get-started  starts*/
-.get-started {
-  position: absolute;
-  width: 339px;
-  height: 45px;
-  left: 100px;
-  top: 432px;
-  background: #ffffff;
-  border-radius: 5px;
-  text-decoration: none;
-  padding-top: 10px;
-}
-/* .get-started ends */
+  .get-started2{
+    padding: 10px 5rem;
+    margin-left: 0px;
 
-/* mediaquery for get started starts */
-
-@media (max-width: 481px) {
-  .get-started {
-    position: absolute;
-    left: 6px;
-    top: 552px;
-    
   }
-}
-/* mediaquery for get started ends */
-
-/* css for  apple starts */
-
-.apple {
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  left: 100px;
-  top: 509px;
-  border: outset solid 2 #ffffff;
-  background: url(../Images/Group\ 68@2x.png);
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-}
-/* mediaquery for apple  starts */
-
-@media (max-width: 480px) {
-  .apple {
-    position: absolute;
-    left: 6px;
-    top: 609px;
+  .linkCarrier{
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
-}
-/* mediaquery for apple  ends */
-
-/* .google css starts */
-.google {
-  background: url(../Images/Group\ 69.png);
-  position: absolute;
-  width: 170.45px;
-  height: 50px;
-  left: 269px;
-  top: 509px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-}
-/* mediaquery for google  starts */
-@media (max-width: 480px) {
-  .google {
-    position: absolute;
-    left: 185px;
-    top: 609px;
+  .link2Carrier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
+
 }

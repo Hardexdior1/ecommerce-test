@@ -2,7 +2,9 @@
 .get-started-div{
     background-color: #FFFFFF;
 }
-
+body{
+    font-family: sans-serif;
+}
 
 .table-div{
     background: #EEEDEE;
