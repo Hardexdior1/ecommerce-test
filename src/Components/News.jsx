@@ -39,7 +39,7 @@ const News = () => {
       <div className="BreakingNews">
         {showBreaking ? (
           <div className="newsText">
-            <h4>Tina Turner dies at 83</h4>
+            <h4 className="white">Tina Turner dies at 83</h4>
             <p>
               Legendary Tina Turner has died after a long illness , her family
               said in a statement on wednesday she was 83 ..known as the queen
@@ -54,7 +54,7 @@ const News = () => {
         )}
         {showSport ? (
           <div className="showSport">
-            <h4>ManchesterCity wins the premier league</h4>
+            <h4 className="white">ManchesterCity wins the premier league</h4>
             <p>
               MANCHESTER, England, May 21 Reuters - Manchester City celebrated
               their Premier League title success on Sunday, beating Chelsea 1-0
@@ -71,7 +71,7 @@ const News = () => {
 
         {showCrypto ? (
           <div className="showCrypto">
-            <h4>Crypto Market</h4>
+            <h4 className="white">Crypto Market</h4>
             <p>
               ApeCoin {"(APE)"} aptly named after a very popular animal in
               trading circles, is a crypto currency inspired by the famous NFT

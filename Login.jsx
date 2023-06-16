@@ -31,7 +31,7 @@ const Login = () => {
             // }
           }}>
 
-          <h3>Welcome Back</h3>
+          <h3 className="welcomeBack">Welcome Back</h3>
          
           <input
             onChange={(event) => {

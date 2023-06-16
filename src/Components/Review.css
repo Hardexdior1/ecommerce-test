@@ -1,12 +1,14 @@
 
 
 .review{
-    padding: 20px ;
+    /* padding: 20px ; */
     display: flex;
     flex-direction: column;
     gap: 5px;
     align-items: center;
+    margin-top: 80px;
     /* background-color: #7C20BE; */
+    /* background-color:red; */
     
 }
 @media (min-width:541px){

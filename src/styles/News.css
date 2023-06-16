@@ -24,11 +24,7 @@
     font-weight: lighter;
     
 }
-.carrier h4{
-    font-family: sans-serif;
-    /* color: #ffffff; */
-    color: rgb(247, 123, 8);
-}
+
 .carrier p{
     font-family: sans-serif;
     /* color: #ffffff; */
@@ -38,8 +34,8 @@
 
 }
 .newsText{
-    /* background-image: url(../Images/BreakingNewsImgMobile.jfif); */
-    background-color: rgb(196, 6, 196);
+    background-image: url(../Images/BreakingNewsImgMobile.jfif);
+    /* background-color: rgb(196, 6, 196); */
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -56,9 +52,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(../Images/Premiums.jfif);
+    /* background-image: url(../Images/Premiums.jfif); */
     transition: 0.3s;
     background-color: black;
+}
+.white{
+    color:white;
 }
 .showCrypto{
     background-size: cover;
@@ -70,10 +69,4 @@
     background-image: url(../Images/BiggestEventBG.jfif);
     transition: 0.3s;
 
-}
-@media (max-width:539px) {
-    .showCrypto{
-        background-image: url(../Images/HuluOriginals.jfif);
-
-    }
 }

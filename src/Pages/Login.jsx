@@ -25,7 +25,7 @@ function validateEmail(){
 }
   return (
     <div className='carrier'>
-      <h4>welcome back</h4>
+      <h4 className='welcomeBack'>welcome back</h4>
 
       <div className="login-div">
         <form className='form' onSubmit={(event)=>{

@@ -30,7 +30,6 @@ const LandingPage = ({rate}) => {
       <CarouselReview />
       <Section7 /> 
       {/* <TestingRemove />   */}
-            <a href="">REFRESH</a>
 
      
     </div>
