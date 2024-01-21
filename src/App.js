@@ -1,49 +1,107 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar1.jsx";
-import LandingPage from "./Pages/LandingPage";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import Main from "./Components/Sections/Main";
+import ClothesData from "./Components/Data/ClothesData";
+import Navbar1 from "./Components/Navigation/Navbar1";
+import Data1 from "./Components/Pages/Data1";
+import Footer from "./Components/Sections/Footer";
 
-import GetStarted from "./Pages/GetStarted";
-import Login from "./Pages/Login";
-import Welcome from "./Pages/Welcome";
-import { useState } from "react";
-import { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Sellbuy from "./Pages/Sellbuy";
-import Business from "./Pages/Business";
-import Sell from "./Pages/Sell";
+import img from "./Components/Images/adidas10.jpg";
 
 function App() {
-  const [data, SetData] = useState({ rates: [] });
   useEffect(() => {
-    let fetchData = async (url) => {
-      let response = await fetch(url);
-      let fetched = await response.json();
-      console.log(fetched);
-      SetData({ ...data, rates: fetched.data });
-    };
-
-    fetchData("https://api.coinlore.net/api/tickers/?start=0&limit=5");
+    window.scrollTo(0, 0); //the code is to make sure user start from the begining of he page anytime they visit it
   }, []);
+  const [data, setData] = useState(ClothesData);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(12);
+  const pageCount = Math.ceil(data.length / itemsPerPage);
+
+  // const nextPage = () => {
+  //   setCurrentPage(data.slice(12, 24));
+  // };
+
+  // const prevPage = () => {
+  //   setCurrentPage((old) => Math.max(old - 1, 1));
+  // };
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const [currentItems, setCurrentItems] = useState(
+    data.slice(startIndex, endIndex)
+  );
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [messageIfTheSearchHasNoResult, setMessageIfTheSearchHasNoResult] =
+    useState("");
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+
+    let matchingItems = [];
+    if (e.target.value !== "") {
+      matchingItems = ClothesData.filter(
+        (item) =>
+          item.category.toLowerCase().includes(e.target.value.toLowerCase()) ||
+          item.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+          String(item.price).includes(e.target.value)
+      );
+    } else {
+      matchingItems = data.slice(startIndex, endIndex);
+    }
+
+    if (matchingItems.length === 0 && e.target.value !== "") {
+      setMessageIfTheSearchHasNoResult(
+        `No results found for "${e.target.value}"`
+      );
+    } else {
+      setMessageIfTheSearchHasNoResult("");
+    }
+
+    setCurrentItems(matchingItems);
+    window.scrollTo(matchingItems);
+  };
+
+  const firstPage = () => {
+    setCurrentItems(data.slice(0, 12));
+    window.scrollTo(0, 0);
+  };
+
+  const secondPage = () => {
+    setCurrentItems(data.slice(12, 24));
+    window.scrollTo(0, 0);
+  };
+  const thirdPage = () => {
+    setCurrentItems(data.slice(24, 36));
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="App">
-      <div></div>
+     
+
       <BrowserRouter>
-
-        <Navbar />
+        <Navbar1 />
         <Routes>
-
-          <Route path="/" element={ <LandingPage rate={data.rates} /> } />
-          <Route path="/getstarted" element={<GetStarted />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/welcome" element={<Welcome />} />
-          <Route path="/Sellbuy" element={<Sellbuy />} />
-          <Route path="Business" element={<Business />} />
-
-          <Route path="/Sell" element={<Sell />} />
+          <Route
+            path="/"
+            element={
+              <Main
+                firstPage={firstPage}
+                secondPage={secondPage}
+                thirdPage={thirdPage}
+                threeOfSixProducts={currentItems}
+                handleSearchChange={handleSearchChange}
+                messageIfTheSearchHasNoResult={messageIfTheSearchHasNoResult}
+              />
+            }
+          />
+          <Route path="/Data1" element={<Data1 />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
+
+      <a href="">REFRESH</a>
     </div>
   );
 }

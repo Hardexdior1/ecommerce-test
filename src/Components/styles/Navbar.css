@@ -1,0 +1,33 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 25px ;
+    background-color: white;
+    box-shadow: 3px 4px 5px rgb(226, 224, 221);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    transition: 0.3s;
+}
+
+.fixedNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 25px ;
+    background-color: rgb(252, 252, 252);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: 0.3s;
+    box-shadow: 3px 4px 5px rgb(226, 224, 221);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+header a{
+    text-decoration: none;
+    color: black;
+}

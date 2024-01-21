@@ -1,0 +1,124 @@
+.card{
+    background-color: white;
+    padding: 10px 10px 10px 10px ;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-align: left;
+    /* width:325px; */
+    overflow:hidden;
+    border:1px solid grey;
+
+}
+.card:hover{
+    border-radius: 8px;
+}
+.card h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ratings{
+    color: rgb(245, 187, 40);
+    margin-top: 0;
+}
+.card button{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 11px ;
+    transition: 0.3s;
+}
+.card button:hover{
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+}
+.flexTexts{
+    display: flex;
+   flex-direction: column;
+   gap: 6px;
+}
+
+.name{
+  text-transform: capitalize;
+}
+
+.detailsWrap{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    position: absolute;
+}
+
+
+.gridDetails{
+    display: grid;
+    gap: 20px ;
+    align-items: center;
+    grid-template-columns: 3fr 2fr ;
+}
+.gridDetails img{
+    width: 100%;
+    
+    object-fit: contain;
+}
+.gridDetails{
+    padding: 20px;
+    background-color: aliceblue;
+    /* background-color: beige; */
+}
+@media (max-width:800px) {
+    .gridDetails{
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width:1017px){
+    .gridDetails{
+        margin-bottom: 25%;
+    }
+}
+@media (max-width:500px) {
+    .gridDetails img{
+        /* height: 350px; */
+        object-fit: contain;
+    }
+}
+.gridDetails h2{
+    text-transform: capitalize;
+}
+
+.absolute{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10% 10% 10% 10%;
+    position:fixed ;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    z-index: 20px;
+    background-color: black;
+}
+@media (max-width:1026px) {
+    .absolute{
+        padding: 0px 5% 0px 5% ;
+    }
+}
+
+
+.remove{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
