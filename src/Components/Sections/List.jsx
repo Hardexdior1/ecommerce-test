@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/List.css";
 import { FaStar } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
-const List = ({ img, name, price, category, id }) => {
+const List = ({ img, name, price, category, id, handleAddToCart }) => {
   const [showModule, setModule] = useState(false);
+
+
   // const [defaultImg, setDefaultImg] = useState(img);
 
   const handleImageClick = () => {
@@ -14,8 +16,11 @@ const List = ({ img, name, price, category, id }) => {
     window.scrollTo(0, 100);
   };
 
+  
+
   return (
     <div>
+     
       <div className="card">
         <div>
           <div
@@ -28,7 +33,6 @@ const List = ({ img, name, price, category, id }) => {
           <div className="flexTexts">
             <h4 className="price">${price}</h4>
             <h4 className="name">name : {name}</h4>
-            {/* <h5>{category}</h5> */}
 
             <div className="ratings">
               <FaStar />
@@ -38,7 +42,12 @@ const List = ({ img, name, price, category, id }) => {
             </div>
           </div>
 
-          <button>Add to cart </button>
+          <button
+            onClick={() => {
+              handleAddToCart();
+            }}>
+            Add to cart{" "}
+          </button>
         </div>
       </div>
 
@@ -63,6 +72,16 @@ const List = ({ img, name, price, category, id }) => {
                     Latest <b>{name}</b> for <b>{category}</b>
                   </p>
                 </div>
+
+                <button
+                  className="btn"
+                  onClick={() => {
+                    handleAddToCart();
+                    setModule(false);
+                    window.scrollTo(0, 0);
+                  }}>
+                  Add to cart{" "}
+                </button>
               </div>
             </div>
           </div>

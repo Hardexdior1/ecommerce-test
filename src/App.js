@@ -3,37 +3,68 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Main from "./Components/Sections/Main";
 import ClothesData from "./Components/Data/ClothesData";
 import Navbar1 from "./Components/Navigation/Navbar1";
-import Data1 from "./Components/Pages/Data1";
 import Footer from "./Components/Sections/Footer";
-
-import img from "./Components/Images/adidas10.jpg";
+import Cart from "./Components/Pages/Cart";
 
 function App() {
   useEffect(() => {
     window.scrollTo(0, 0); //the code is to make sure user start from the begining of he page anytime they visit it
   }, []);
   const [data, setData] = useState(ClothesData);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(12);
-  const pageCount = Math.ceil(data.length / itemsPerPage);
-
-  // const nextPage = () => {
-  //   setCurrentPage(data.slice(12, 24));
-  // };
-
-  // const prevPage = () => {
-  //   setCurrentPage((old) => Math.max(old - 1, 1));
-  // };
-
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const [currentItems, setCurrentItems] = useState(
-    data.slice(startIndex, endIndex)
-  );
+  const [listItems, setListItems] = useState(data.slice(0, 12));
 
   const [searchTerm, setSearchTerm] = useState("");
   const [messageIfTheSearchHasNoResult, setMessageIfTheSearchHasNoResult] =
     useState("");
+
+  const [message, setMessage] = useState("");
+
+  const [cart, setCart] = useState([]);
+  const clear = () => {
+    setCart([]);
+  };
+  let length = cart.length;
+  const handleAddToCart = (item) => {
+    setCart((currentCart) => {
+      const itemExists = currentCart.find(
+        (cartItem) => cartItem.id === item.id
+      );
+
+      if (itemExists) {
+        return currentCart;
+      }
+
+      setMessage("Product has been added to cart");
+
+      let timeoutId = setTimeout(() => {
+        setMessage("");
+      }, 2000);
+
+      setTimeout(() => {
+        clearTimeout(timeoutId);
+      }, 2000);
+
+      return [...currentCart, item];
+    });
+  };
+
+  const removeFromCart = (item) => {
+    setCart((currentCart) => {
+      const indexOfItemToRemove = currentCart.findIndex(
+        (cartItem) => cartItem.id === item.id
+      );
+
+      if (indexOfItemToRemove === -1) {
+        return currentCart;
+      }
+
+      return [
+        ...currentCart.slice(0, indexOfItemToRemove),
+        ...currentCart.slice(indexOfItemToRemove + 1),
+      ];
+    });
+  };
+
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -47,7 +78,7 @@ function App() {
           String(item.price).includes(e.target.value)
       );
     } else {
-      matchingItems = data.slice(startIndex, endIndex);
+      matchingItems = data.slice(0, 12);
     }
 
     if (matchingItems.length === 0 && e.target.value !== "") {
@@ -58,50 +89,52 @@ function App() {
       setMessageIfTheSearchHasNoResult("");
     }
 
-    setCurrentItems(matchingItems);
+    setListItems(matchingItems);
     window.scrollTo(matchingItems);
   };
 
   const firstPage = () => {
-    setCurrentItems(data.slice(0, 12));
+    setListItems(data.slice(0, 12));
     window.scrollTo(0, 0);
   };
 
   const secondPage = () => {
-    setCurrentItems(data.slice(12, 24));
+    setListItems(data.slice(12, 24));
     window.scrollTo(0, 0);
   };
   const thirdPage = () => {
-    setCurrentItems(data.slice(24, 36));
+    setListItems(data.slice(24, 36));
     window.scrollTo(0, 0);
   };
 
   return (
     <div className="App">
-     
-
       <BrowserRouter>
-        <Navbar1 />
+        <Navbar1 length={length} />
         <Routes>
           <Route
             path="/"
             element={
               <Main
+                handleAddToCart={handleAddToCart}
+                listItems={listItems}
                 firstPage={firstPage}
                 secondPage={secondPage}
                 thirdPage={thirdPage}
-                threeOfSixProducts={currentItems}
                 handleSearchChange={handleSearchChange}
                 messageIfTheSearchHasNoResult={messageIfTheSearchHasNoResult}
+                message={message}
               />
             }
           />
-          <Route path="/Data1" element={<Data1 />} />
+          <Route
+            path="/Cart"
+            element={<Cart cart={cart} removeFromCart={removeFromCart} clear={clear}/>}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>
 
-      <a href="">REFRESH</a>
     </div>
   );
 }

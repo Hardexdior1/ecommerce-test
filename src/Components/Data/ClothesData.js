@@ -160,13 +160,7 @@ const ClothesData = [
     img: kid6,
     category: "kids",
   },
-  {
-    id: 17,
-    name: "dior",
-    price: 700,
-    img: kid7,
-    category: "kids"
-  },
+
   {
     id: 18,
     name: "versace",
@@ -238,6 +232,13 @@ const ClothesData = [
     category: "men",
   },
   {
+    id: 36,
+    name: "lacoste",
+    price: 114,
+    img: img14,
+    category: "kids",
+  },
+  {
     id: 28,
     name: "versace",
     price: 400,
@@ -250,6 +251,13 @@ const ClothesData = [
     price: 30,
     img: kid12,
     category: "kids",
+  },
+  {
+    id: 34,
+    name: "lacoste",
+    price: 400,
+    img: img12,
+    category: "men",
   },
   {
     id: 30,
@@ -281,11 +289,11 @@ const ClothesData = [
     category: "men",
   },
   {
-    id: 34,
-    name: "lacoste",
-    price: 400,
-    img: img12,
-    category: "men",
+    id: 17,
+    name: "dior",
+    price: 700,
+    img: kid7,
+    category: "kids"
   },
   {
     id: 35,
@@ -294,81 +302,7 @@ const ClothesData = [
     img: img13,
     category: "kids",
   },
-  {
-    id: 36,
-    name: "lacoste",
-    price: 114,
-    img: img14,
-    category: "kids",
-  },
+  
 ];
 export default ClothesData;
 
-// Certainly! Here's an example of how you can use the useContext hook in React:
-
-// First, let's create a new file called CartContext.js:
-
-// jsx
-// Copy code
-// import React, { createContext, useState } from 'react';
-
-// // Create the CartContext
-// export const CartContext = createContext();
-
-// // Create the CartProvider component
-// export const CartProvider = ({ children }) => {
-//   const [cartItems, setCartItems] = useState([]);
-
-//   const addToCart = (product) => {
-//     setCartItems([...cartItems, product]);
-//   };
-
-//   const removeItem = (productId) => {
-//     const updatedCartItems = cartItems.filter((item) => item.id !== productId);
-//     setCartItems(updatedCartItems);
-//   };
-
-//   return (
-//     <CartContext.Provider value={{ cartItems, addToCart, removeItem }}>
-//       {children}
-//     </CartContext.Provider>
-//   );
-// };
-// In this file, we define the CartContext using the createContext function from React. We also create a CartProvider component that wraps around the child components. It manages the cart state and provides the necessary functions to update the cart.
-
-// Inside the CartProvider, we define the cartItems state using the useState hook, initialized as an empty array. We also define the addToCart and removeItem functions to add and remove items from the cart.
-
-// Then, we provide the cartItems, addToCart, and removeItem values to the context using the CartContext.Provider. The children components are rendered within this provider.
-
-// Now, let's use the CartContext in another component. Here's an example using a Product component:
-
-// jsx
-// Copy code
-// import React, { useContext } from 'react';
-// import { CartContext } from './CartContext';
-
-// const Product = ({ id, name, price }) => {
-//   const { addToCart } = useContext(CartContext);
-
-//   const handleAddToCart = () => {
-//     const product = { id, name, price };
-//     addToCart(product);
-//   };
-
-//   return (
-//     <div>
-//       <h3>{name}</h3>
-//       <p>Price: ${price}</p>
-//       <button onClick={handleAddToCart}>Add to Cart</button>
-//     </div>
-//   );
-// };
-
-// export default Product;
-// In this example, we import the CartContext from the CartContext.js file. We use the useContext hook to access the values provided by the CartContext.Provider.
-
-// Inside the Product component, we destructure the addToCart function from the context. When the "Add to Cart" button is clicked, we create a product object with the provided id, name, and price, and call the addToCart function, passing the product object as an argument.
-
-// You can use the Product component or any other component wrapped within the CartProvider to access the cart context and perform actions like adding or removing items from the cart.
-
-// Regenerate response

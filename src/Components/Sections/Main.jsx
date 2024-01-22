@@ -5,12 +5,14 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Main = ({
-  threeOfSixProducts,
+  listItems,
   handleSearchChange,
   messageIfTheSearchHasNoResult,
   firstPage,
   secondPage,
   thirdPage,
+  handleAddToCart,
+  message,
 }) => {
   const [style1, setStyle1] = useState(true);
   window.addEventListener("scroll", () => {
@@ -23,8 +25,6 @@ const Main = ({
 
   return (
     <main>
- 
-
       <marquee behavior="normal" direction="left">
         <b>
           {" "}
@@ -44,9 +44,18 @@ const Main = ({
         <p className="noResult">{messageIfTheSearchHasNoResult}</p>
       )}
 
+      <center className="center">
+        {message && <small className="small">{message}</small>}
+      </center>
       <div className="gridProductCards">
-        {threeOfSixProducts.map((datum) => {
-          return <List key={datum.id} {...datum} />;
+        {listItems.map((datum) => {
+          return (
+            <List
+              key={datum.id}
+              {...datum}
+              handleAddToCart={() => handleAddToCart(datum)}
+            />
+          );
         })}
       </div>
 
@@ -58,4 +67,5 @@ const Main = ({
     </main>
   );
 };
+
 export default Main;
